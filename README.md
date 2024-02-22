@@ -42,24 +42,54 @@ s.n. dasgupta
 ### Display the content of the files
 cat < file1
 ## OUTPUT
-
+chanchal singhvi
+c.k. shukla
+s.n. dasgupta
+sumit chakrobartry
+^d
 
 
 cat < file2
 ## OUTPUT
+anil aggarwal
+barun sengupta
+c.k. shukla
+lalit chowdury
+s.n.dasgupta
+^d
 
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
+file1 file2 differ: char1, line1
  
 comm file1 file2
  ## OUTPUT
+     anil aggarwal
+     barun sengupta
+     c.k. shukla
+chanchal singhvi
+c.k. shukla
+       lalit chowdry
+            s.n. dasgupta
+sumit chakrobarty
+^d
 
  
 diff file1 file2
 ## OUTPUT
-
+--- file1
++++ file2
+@@ -1,5  +1,5 @@
+-chanchal singhvi
++anil aggarwal
++barun sengupta
+ c.k. shukla
++lalit chowdry
+ s.n. dasgupta
+-sumit chakrobarty
+-^d
 
 #Filters
 
@@ -82,18 +112,20 @@ cat > file22
 
 cut -c1-3 file11
 ## OUTPUT
-
+Hel
 
 
 
 cut -d "|" -f 1 file22
 ## OUTPUT
-
+1001
+1002
 
 
 cut -d "|" -f 2 file22
 ## OUTPUT
-
+Ram
+tom
 
 cat < newfile 
 ```
@@ -107,12 +139,11 @@ hello world
  
 grep Hello newfile 
 ## OUTPUT
-
-
+Hello world
 
 grep hello newfile 
 ## OUTPUT
-
+hello wo
 
 
 
